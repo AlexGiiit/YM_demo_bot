@@ -1,0 +1,23 @@
+https://www.youtube.com/watch?v=-vaK3f01Oyg
+#Проверка вашего пароля
+def check_string_in_file(user_input) :
+with open("text.txt", "r") as file:
+file_content = file.readlines()
+
+for line in file_content:
+line = Line.strip()
+
+if line.lower() == user_input.lower():
+return True
+
+return False
+
+def main():
+user_input = input("Bsequte naponb: ")
+
+if check_string_in_file(user_input):
+print("Naponb Haiinen B aiine.")
+else:
+print("faponb He HaiimeH B daiine.")
+
+main()
